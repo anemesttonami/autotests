@@ -9,7 +9,7 @@ public class SearchTests {
     @Test
     void successfulSearchTest() {
         open("https://duckduckgo.com/");
-        $("#searchbox_input").setValue("selenide").pressEnter();
+        // ruining
         $("[data-testid=result]").shouldHave(text("https://selenide.org"));
     }
 }
