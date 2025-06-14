@@ -5,11 +5,11 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class SearchTests {
+
     @Test
     void successfulSearchTest() {
         open("https://duckduckgo.com/");
         $("#searchbox_input").setValue("selenide").pressEnter();
         $("[data-testid=result]").shouldHave(text("https://selenide.org"));
-
     }
 }
